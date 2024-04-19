@@ -1,8 +1,7 @@
+import { Link } from "react-router-dom";
 
 
-
-
-const login = () => {
+const Login = () => {
     return (
         <div className="flex items-center flex-col min-w-96 mx-auto justify-center">
            <div className="w-full p-6 rounded-lg shadow-lg bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-01">
@@ -24,9 +23,9 @@ const login = () => {
                 </label>
                 <input type="password" placeholder="Enter your password" className="input  text-black input-bordered h-10 w-full max-w-xs" />
             </div>
-            <a href="#" className="text-black text-sm hover:text-red-600 mt-2 inline-block hover:underline">
+            <Link to="/signup" className="text-black text-sm hover:text-red-600 mt-2 inline-block hover:underline">
                {"Don't"} have an account ?
-            </a>
+            </Link>
             <div>
                 <button className="btn  mt-2 btn-sm btn-block">Login</button>
             </div>
@@ -39,12 +38,12 @@ const login = () => {
     );
 };
 
-export default login;
+export default Login;
 
 
 
 
-// const login = () => {
+// const Login = () => {
 //     return (
 //         <div className="flex items-center flex-col min-w-96 mx-auto justify-center">
 //            <div className="w-full p-6 rounded-lg shadow-lg bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-01">
@@ -81,4 +80,4 @@ export default login;
 //     );
 // };
 
-// export default login;
+// export default Login;

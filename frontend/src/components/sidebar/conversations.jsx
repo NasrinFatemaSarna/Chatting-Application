@@ -1,6 +1,6 @@
 
-import Conversation from "./conversation"
-const conversations = () => {
+import Conversation from "./Conversation"
+const Conversations = () => {
   return (
     <div className="py-2 flex flex-col overflow-auto">
       <Conversation />
@@ -14,7 +14,7 @@ const conversations = () => {
   )
 }
 
-export default conversations
+export default Conversations
 
 
 

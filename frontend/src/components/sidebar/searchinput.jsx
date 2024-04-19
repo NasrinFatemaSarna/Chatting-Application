@@ -1,6 +1,6 @@
 import { IoSearchSharp } from "react-icons/io5";
 
-const searchinput = () => {
+const SearchInput = () => {
   return (
     <form className="flex items-center gap-2">
 
@@ -12,7 +12,7 @@ const searchinput = () => {
   )
 }
 
-export default searchinput
+export default SearchInput
 
 
 
