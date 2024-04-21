@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className="border-r border-gray-200 p-2 flex flex-col">
       <SearchInput />
 
-      <div className="divider px-2"></div>
+      <div className="divider px-2 overflow-auto"></div>
       <Conversations/>
       <LogoutButton/>
      

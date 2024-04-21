@@ -1,13 +1,13 @@
 
 import MessageContainer from "../../components/message/MessageContainer";
 
-import Sidebar from "../../components/sidebar/Sidebar.jsx"
+import Sidebar from "../../components/sidebar/Sidebar";
 // import MessageContainer from "../../components/MessageContainer.js";
 
 const Home = () => {
   return (
-    <div className=" flex h-[100%] rounded-lg overflow-hidden bg-slate-400 bg-clip-padding 
-    backdrop-filter backdrop-blur-lg bg-opacity-1">
+    <div className=" flex sm:h-[550px] md:w-[650px] rounded-lg overflow-hidden bg-slate-400 bg-clip-padding 
+    backdrop-filter backdrop-blur-lg bg-opacity-0">
       <Sidebar/>
       <MessageContainer/>
     </div>

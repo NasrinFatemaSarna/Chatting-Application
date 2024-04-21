@@ -15,6 +15,10 @@ function App() {
         <Route path="/login" element={authUser ? <Navigate to="/"/> : <Login/>}></Route>
         <Route path="/signup" element={authUser ? <Navigate to="/"/> : <Signup/>}></Route>
 
+        {/* <Route path="/" element={<Home/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route> */}
+
      
       </Routes>
       <Toaster />
