@@ -1,25 +1,42 @@
 
+import { useState } from "react";
 import { IoMdSend } from "react-icons/io";
+import useSendMessage from "../../hooks/useSendMessage";
+
 const MessageInput = () => {
+  const [message, setMessage] = useState("");
+  const { loading, sendMessage } = useSendMessage();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!message || loading) return; // Prevent sending message while loading
+    await sendMessage(message);
+    setMessage("");
+  };
+
   return (
-   <form className="px-5 my-3">
-    <div className="w-full relative">
+    <form onSubmit={handleSubmit} className="px-5 my-3">
+      <div className="w-full relative">
+        <input
+          type="text"
+          placeholder="Send a message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="border text-sm rounded-lg block text-black p-2.5 input-bordered w-full"
+        />
+        {!loading && ( // Render send button only when not loading
+          <button type="submit" className="absolute inset-y-0 end-0 flex items-center pe-3">
+            <IoMdSend />
+          </button>
+        )}
+        {loading && <div className="loading loading-spinner"></div>}
+      </div>
+    </form>
+  );
+};
 
-    <input 
-    type="text" placeholder="Send a message"
-     className=" border text-sm rounded-lg block  text-black p-2.5 input-bordered w-full "/>
-    <button type="submit" className="absolute inset-y-0 end-0 flex items-center pe-3">
-    <IoMdSend className="w-6 h-6 text-black cursor-pointer" />
-      </button>
+export default MessageInput;
 
-    </div>
-
-
-   </form>
-  )
-}
-
-export default MessageInput
 
 
 
